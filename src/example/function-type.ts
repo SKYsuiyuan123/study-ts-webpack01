@@ -6,4 +6,5 @@
  * @FilePath: \study-ts-webpack01\src\example\function-type.ts
  * @Description: ts 的函数类型
  */
+export default 1;
 console.clear();

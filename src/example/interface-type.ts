@@ -2,10 +2,12 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-05 11:47:26
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-05 12:22:40
+ * @LastEditTime: 2020-04-05 15:12:02
  * @FilePath: \study-ts-webpack01\src\example\interface-type.ts
  * @Description: ts 的接口类型
  */
+export default 1;
+
 console.clear();
 
 interface Vegetable {
