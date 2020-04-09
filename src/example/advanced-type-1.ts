@@ -2,7 +2,7 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-08 21:54:21
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-09 23:27:06
+ * @LastEditTime: 2020-04-10 00:23:08
  * @FilePath: \study-ts-webpack01\src\example\advanced-type-1.ts
  * @Description: ts 高级类型 1
  */
@@ -44,12 +44,14 @@ if (item1 instanceof CreateByClass1) {
   console.log(item1.name);
 }
 
+// null / undefined
 const getLengthFunction = (value: string | null): number =>
   (value || "").length;
 
 let aa = getLengthFunction("");
 console.log(aa);
 
+// 类型断言
 function getSplicedStr(num: number | null): string {
   function getRes(prefix: string) {
     return prefix + num?.toFixed().toString();
@@ -62,6 +64,7 @@ function getSplicedStr(num: number | null): string {
 
 console.log(getSplicedStr(3.03));
 
+// 类型别名
 type PositionType<T> = {
   x: T;
   y: T;
@@ -73,21 +76,32 @@ const position1: PositionType<number> = {
 };
 console.log(position1);
 
+// 内联类型注解
 let position2: {
   x: number;
   y: number;
+  z: true;
 };
 
 position2 = {
   x: 1,
   y: 2,
+  z: true,
 };
 console.log(position2);
 
+// 字面量类型
+// 1. 字符串字面量
 type Name = "lison";
 const name1: Name = "lison";
 console.log(name1);
 
+// 字符串字面量 联合类型
+type DireCtion = "north" | "east" | "south" | "west";
+const direction1: DireCtion = "south";
+console.log(direction1);
+
+// 2. 数字面量
 type Age = 18;
 interface InfoInterface {
   name: string;
