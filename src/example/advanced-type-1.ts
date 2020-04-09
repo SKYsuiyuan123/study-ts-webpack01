@@ -2,14 +2,15 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-08 21:54:21
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-08 23:04:35
+ * @LastEditTime: 2020-04-09 23:27:06
  * @FilePath: \study-ts-webpack01\src\example\advanced-type-1.ts
- * @Description: ts 高级类型
+ * @Description: ts 高级类型 1
  */
 export default 1;
 console.clear();
 
-// 交叉类型
+/* 1. 交叉类型 */
+
 const mergeFunc = <T, U>(arg1: T, arg2: U): T & U => {
   return Object.assign({}, arg1, arg2);
 };
@@ -99,7 +100,7 @@ const info1: InfoInterface = {
 };
 console.log(info1);
 
-// 可辨识联合类型
+/* 3. 可辨识联合类型 */
 interface Square {
   kind: "square";
   size: number;
