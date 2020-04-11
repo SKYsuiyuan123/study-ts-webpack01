@@ -2,7 +2,7 @@
  * @Author: sunpeiyuan
  * @Date: 2020-03-31 22:37:27
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-11 15:19:10
+ * @LastEditTime: 2020-04-11 23:15:15
  * @FilePath: \study-ts-webpack01\src\index.ts
  * @Description: 項目配置文件
  */
@@ -15,3 +15,4 @@
 // import "./example/advanced-type-2";
 // import "./example/merging";
 import "./example/decorators";
+import "./example/enum-type";
