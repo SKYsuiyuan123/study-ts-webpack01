@@ -2,12 +2,11 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-05 11:47:26
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-05 15:12:02
+ * @LastEditTime: 2020-04-12 11:05:40
  * @FilePath: \study-ts-webpack01\src\example\interface-type.ts
  * @Description: ts 的接口类型
  */
 export default 1;
-
 console.clear();
 
 interface Vegetable {
@@ -19,6 +18,7 @@ const getVegetable = ({ color, type }: Vegetable): string => {
   return `A ${color ? color : ""} ${type}`;
 };
 
+// 方法一 类型断言
 const rs1 = getVegetable({
   color: "red",
   type: "tomoto",
@@ -26,6 +26,7 @@ const rs1 = getVegetable({
 } as Vegetable);
 console.log(rs1);
 
+// 方法二 鸭式变形法
 const vegetableInfo = {
   color: "blue",
   type: "tomoto",
@@ -34,8 +35,6 @@ const vegetableInfo = {
 
 const rs2 = getVegetable(vegetableInfo);
 console.log(rs2);
-
-let a = 3;
 
 interface RoleDic {
   [id: string]: string;
