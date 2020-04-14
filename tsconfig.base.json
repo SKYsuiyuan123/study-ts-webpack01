@@ -1,0 +1,6 @@
+{
+  // 文件选项
+  "files": ["src/config/a.ts"], // 编译器需要编译的单个文件列表
+  "include": ["src/config"], // 编译器需要编译的文件或目录，支持通配符。include 和 files 会合并。
+  "exclude": ["src/config/lib"] // 编译器需要排除的文件或文件夹 默认会排除声明文件和 node_modules 下的文件。
+}
