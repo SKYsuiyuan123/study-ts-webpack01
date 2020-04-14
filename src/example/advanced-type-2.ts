@@ -42,7 +42,7 @@ class PowCounter extends Counter {
 let powCounter = new PowCounter(2);
 // console.log(powCounter.pow(3).add(10));
 
-/* 2. keyof */
+/* 2. keyof T */
 
 interface Info {
   name: string;

@@ -2,12 +2,13 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-05 15:08:47
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-05 15:29:30
- * @FilePath: \study-ts-webpack01\src\example\generics.type.ts
+ * @LastEditTime: 2020-04-12 15:23:49
+ * @FilePath: \study-ts-webpack01\src\example\generics-type.ts
  * @Description: ts 的泛型
  */
 export default 1;
 console.clear();
+
 const getArray = <T>(value: T, times: number): T[] =>
   new Array(times).fill(value);
 
@@ -37,3 +38,19 @@ let obj = {
 
 let rs4 = getProps(obj, "c");
 console.log(rs4);
+
+interface Log<T = string> {
+  (value: T): T;
+}
+
+let myLog: Log<number> = (value: number) => value;
+console.log(myLog(1));
+
+// 泛型约束
+function log2<T extends { length: number }>(value: T): T {
+  console.log(value, value.length);
+  return value;
+}
+
+log2("abc");
+log2({ length: 2, num: 22 });
