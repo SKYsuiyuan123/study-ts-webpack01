@@ -6,4 +6,4 @@
  * @FilePath: \study-ts-webpack01\src\config\lib\lib.ts
  * @Description:
  */
-let lib = "lib";
+const lib = "lib";

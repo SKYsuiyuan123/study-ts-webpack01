@@ -6,5 +6,5 @@
  * @FilePath: \study-ts-webpack01\src\config\b.ts
  * @Description:
  */
-let bb = 11;
-let b = 2;
+const bb = 11;
+const b = 2;
