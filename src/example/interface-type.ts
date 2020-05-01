@@ -2,7 +2,7 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-05 11:47:26
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-05-01 12:14:22
+ * @LastEditTime: 2020-05-01 12:59:47
  * @FilePath: \study-ts-webpack01\src\example\interface-type.ts
  * @Description: ts 的接口类型
  */
@@ -95,4 +95,17 @@ function getData<T>(arg: T): Result<T> {
 const data = getData<string>("sd").data;
 const data2 = getData<number>(232).data;
 console.log(data);
-console.log(data);
+console.log(data2);
+
+function getData2<T>(arg: T): Promise<Result<T>> {
+  const data = arg;
+  return Promise.resolve({ data });
+}
+
+const data3 = getData2<number>(232);
+console.log(data3);
+
+data3.then((res) => {
+  const data = res.data;
+  console.log(data);
+});
