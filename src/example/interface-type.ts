@@ -2,7 +2,7 @@
  * @Author: sunpeiyuan
  * @Date: 2020-04-05 11:47:26
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2020-04-12 11:05:40
+ * @LastEditTime: 2020-05-01 12:14:22
  * @FilePath: \study-ts-webpack01\src\example\interface-type.ts
  * @Description: ts 的接口类型
  */
@@ -81,3 +81,18 @@ counter();
 counter();
 counter();
 console.log(counter.count);
+
+interface Result<T> {
+  data: T;
+}
+
+function getData<T>(arg: T): Result<T> {
+  const data = arg;
+
+  return { data };
+}
+
+const data = getData<string>("sd").data;
+const data2 = getData<number>(232).data;
+console.log(data);
+console.log(data);
